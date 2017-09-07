@@ -31,5 +31,5 @@ class GdipC
 	
 	#Include Size.ahk
 	#Include Point.ahk
-	; #Include Rect.ahk
+	#Include Rect.ahk
 }
