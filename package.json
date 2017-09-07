@@ -1,0 +1,19 @@
+{
+  "name": "gdipc",
+  "version": "1.0.0",
+  "description": "GDI+ objects for Autohotkey",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack -w"
+  },
+  "keywords": [
+    "GDI+"
+  ],
+  "author": "Johannes Kilian",
+  "license": "MIT",
+  "devDependencies": {
+    "ahk-loader": "^1.1.7",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "webpack": "^2.7.0"
+  }
+}
