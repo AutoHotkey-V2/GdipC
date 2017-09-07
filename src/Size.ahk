@@ -1,7 +1,7 @@
 class Size
 {
 	; See: https://msdn.microsoft.com/en-us/library/windows/desktop/ms534504(v=vs.85).aspx
-	_version := "0.1.1"
+	_version := "1.0.0"
 	Width := 0
 	Height := 0
 	

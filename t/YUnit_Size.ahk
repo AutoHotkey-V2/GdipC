@@ -11,7 +11,7 @@
 #Warn All
 #Warn LocalSameAsGlobal, Off
 
-ReferenceVersion := "0.1.1"
+ReferenceVersion := "1.0.0"
 debug := 1
 
 OutputDebug "DBGVIEWCLEAR"
