@@ -11,7 +11,7 @@
 #Warn All
 #Warn LocalSameAsGlobal, Off
 
-ReferenceVersion := "0.1.0"
+ReferenceVersion := "0.1.1"
 debug := 1
 
 OutputDebug "DBGVIEWCLEAR"
@@ -55,7 +55,7 @@ class ConstructTestSuite
 		Yunit.assert(obj.height == 110)
 		dbgOut("<[" A_ThisFunc "]", debug)
 	}
-	FromSize() {
+	FromWidthHeight() {
 		Global debug
 		dbgOut(">[" A_ThisFunc "]", debug)
 		obj1 := new GdipC.Size(100,110)
@@ -90,6 +90,61 @@ class MethodTestSuite
 		obj.width := 0
 		obj.Height := 0
 		Yunit.assert(obj.Empty() == true)
+		dbgOut("<[" A_ThisFunc "]", debug)
+	}
+	
+	Equals() {
+		Global debug
+		dbgOut(">[" A_ThisFunc "]", debug)
+		obj1 := new GdipC.Size(100,200)
+		obj2 :=  new GdipC.Size(100,200)
+		Yunit.assert(obj1.Equals(obj2) == true)
+		obj3 :=  new GdipC.Size(100+1,200+1)
+		Yunit.assert(obj1.Equals(obj3) == false)
+		dbgOut("<[" A_ThisFunc "]", debug)
+	}
+	
+	Subtract() {
+		Global debug
+		dbgOut(">[" A_ThisFunc "]", debug)
+		dx := 10
+		dy := 20
+		obj := new GdipC.Size(100,200)
+		objRef := new GdipC.Size(100 - dx,200 - dy)
+		
+		obj2 := obj.subtract(dx,dy)
+		Yunit.assert(obj2.equals(objRef) == true)
+		
+		obj3 := obj.subtract(new GdipC.Size(dx, dy))
+		Yunit.assert(obj3.equals(objRef) == true)
+		
+		obj4 := obj.subtract(dx+1,dy+1)
+		Yunit.assert(obj4.equals(objRef) == false)
+		
+		obj5 := obj.subtract(new GdipC.Size(dx+1, dy+1))
+		Yunit.assert(obj5.equals(objRef) == false)
+		dbgOut("<[" A_ThisFunc "]", debug)
+	}
+	
+	Add() {
+		Global debug
+		dbgOut(">[" A_ThisFunc "]", debug)
+		dx := 10
+		dy := 20
+		obj := new GdipC.Size(100,200)
+		objRef := new GdipC.Size(100 + dx,200 + dy)
+		
+		obj2 := obj.add(dx,dy)
+		Yunit.assert(obj2.equals(objRef) == true)
+		
+		obj3 := obj.add(new GdipC.Size(dx, dy))
+		Yunit.assert(obj3.equals(objRef) == true)
+		
+		obj4 := obj.add(dx+1,dy+1)
+		Yunit.assert(obj4.equals(objRef) == false)
+		
+		obj5 := obj.add(new GdipC.Size(dx+1, dy+1))
+		Yunit.assert(obj5.equals(objRef) == false)
 		dbgOut("<[" A_ThisFunc "]", debug)
 	}
 	
