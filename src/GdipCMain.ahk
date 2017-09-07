@@ -1,8 +1,7 @@
 class GdipC
 {
-	_version := "0.1.0"
-	__New()
-	{
+	_version := "1.0.0"
+	__New()  {
 		
 		if !DllCall("GetModuleHandle", "str", "gdiplus")
 			DllCall("LoadLibrary", "str", "gdiplus")
@@ -14,18 +13,15 @@ class GdipC
 		Gdip.__New := Gdip._DummyNew
 	}
 	
-	_DummyNew()
-	{
+	_DummyNew() {
 		return false
 	}
 	
-	__Delete()
-	{
+	__Delete() {
 		this.Dispose()
 	}
 	
-	Dispose()
-	{
+	Dispose() {
 		DllCall("gdiplus\GdiplusShutdown", "uptr", this.pToken)
 		if (hModule := DllCall("GetModuleHandle", "str", "gdiplus"))
 			DllCall("FreeLibrary", "uptr", hModule)

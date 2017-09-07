@@ -1,5 +1,7 @@
-# GdipC
+# GdipC [![AutoHotkey2](https://img.shields.io/badge/Language-AutoHotkey-red.svg)](https://autohotkey.com/)
 AutoHotkey implementation of several GDI+ Classes (see [GDI+-Documentation](https://msdn.microsoft.com/en-us/library/windows/desktop/ms534487(v=vs.85).aspx))
+
+This library uses *AutoHotkey Version 2*.
 
 ## Usage 
 
@@ -7,7 +9,7 @@ Include precompiled `GdipC.ahk`from the `lib` folder into your project using sta
 
 ```autohotkey
 #include <gdipc.ahk>
-pt := new Gdip.Point(10,20)
+pt := new GdipC.Point(10,20)
 ```
 
 ## Development

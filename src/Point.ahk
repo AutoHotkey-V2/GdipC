@@ -1,7 +1,7 @@
 class Point
 {
 	; See: https://msdn.microsoft.com/en-us/library/windows/desktop/ms534487(v=vs.85).aspx
-	_version := "0.1.0"
+	_version := "1.0.0"
 	X := 0
 	Y := 0
 	
