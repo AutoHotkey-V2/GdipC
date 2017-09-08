@@ -1,6 +1,6 @@
 class GdipC
 {
-	_version := "1.0.0"
+	_version := "1.0.1"
 	__New()  {
 		
 		if !DllCall("GetModuleHandle", "str", "gdiplus")
