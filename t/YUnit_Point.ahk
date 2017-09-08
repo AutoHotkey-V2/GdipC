@@ -5,8 +5,8 @@
 #Include %A_ScriptDir%\Yunit\OutputDebug.ahk
 
 #include %A_ScriptDir%\..\lib\gdipc.ahk
-#include %A_ScriptDir%\..\lib\DbgOut.ahk
-#include %A_ScriptDir%\..\lib\JSON.ahk
+#include %A_ScriptDir%\lib\DbgOut.ahk
+#include %A_ScriptDir%\lib\JSON.ahk
 
 #Warn All
 #Warn LocalSameAsGlobal, Off

@@ -1,6 +1,6 @@
 class GdipC
 {
-	_version := "1.0.0"
+	_version := "1.0.1"
 	__New()  {
 		
 		if !DllCall("GetModuleHandle", "str", "gdiplus")
@@ -31,5 +31,5 @@ class GdipC
 	
 	#Include Size.ahk
 	#Include Point.ahk
-	; #Include Rect.ahk
+	#Include Rect.ahk
 }
