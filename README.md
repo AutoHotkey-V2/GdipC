@@ -20,3 +20,4 @@ Folowing GDI+-classes have been implemented:
 
 * [Size](https://msdn.microsoft.com/en-us/library/windows/desktop/ms534504(v=vs.85).aspx)
 * [Point](https://msdn.microsoft.com/en-us/library/windows/desktop/ms534487(v=vs.85).aspx)
+* [Rect](https://msdn.microsoft.com/en-us/library/windows/desktop/ms534495(v=vs.85).aspx)
