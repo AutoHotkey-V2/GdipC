@@ -3,7 +3,7 @@ AutoHotkey implementation of several GDI+ Classes (see [GDI+-Documentation](http
 
 This library uses *AutoHotkey Version 2*.
 
-This repository only offers released version of this library - development is taking place unter [GdipC-develop](https://github.com/hoppfrosch/GdipC-Develop)
+This repository only offers the released version of this library - development is taking place under [GdipC-develop](https://github.com/hoppfrosch/GdipC-Develop)
 
 ## Usage 
 
